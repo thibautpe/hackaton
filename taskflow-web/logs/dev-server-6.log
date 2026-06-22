@@ -1,0 +1,10 @@
+[2026-06-16T08:32:11.000Z] INFO  Dev server started on port 3006
+[2026-06-16T08:32:11.120Z] INFO  Watching src/ for changes
+[2026-06-16T08:33:45.330Z] DEBUG File changed: src/app.js
+[2026-06-16T08:33:45.331Z] INFO  Reloading...
+[2026-06-16T08:33:45.890Z] INFO  Reload complete in 559ms
+[2026-06-16T08:41:02.110Z] DEBUG File changed: src/styles/main.css
+[2026-06-16T08:41:02.111Z] INFO  Reloading...
+[2026-06-16T08:41:02.450Z] INFO  Reload complete in 339ms
+[2026-06-16T09:15:33.220Z] WARN  Slow request: GET /src/vendor/date-utils.lib.js (412ms)
+[2026-06-16T09:22:18.001Z] INFO  Dev server stopped

@@ -1,0 +1,11 @@
+{
+  "version": "2.4.1",
+  "buildTime": "2026-06-17T10:22:18.000Z",
+  "files": {
+    "src/app.js": { "hash": "a3f9c21", "size": 1842 },
+    "src/utils/storage.js": { "hash": "b7e1d44", "size": 421 },
+    "src/utils/helpers.js": { "hash": "c2f8a91", "size": 612 },
+    "src/components/taskCard.js": { "hash": "d9a3e02", "size": 1023 }
+  },
+  "cacheBreaker": "2026061710"
+}

@@ -1,0 +1,64 @@
+Equipe;Etape;Levier;prompt_tokens;cached_tokens;completion_tokens;AIC;nb_tours;notes
+Equipe A;0 - Baseline;Aucun;;;;;;;Premier prompt de référence
+Equipe A;1 - Contexte;gitignore + files.exclude;;;;;;;Delta vs baseline
+Equipe A;1bis - Scope large;#codebase (question multi-fichiers dashboard);;;;;;;Comparer avec 1bis etroit
+Equipe A;1bis - Scope etroit;#file: x3 (app.js+storage.js+dashboard.js);;;;;;;Qualite equivalente oui/non en notes
+Equipe A;2A - Instructions;copilot-instructions verbeux;;;;;;;200+ lignes
+Equipe A;2B - Instructions;copilot-instructions court;;;;;;;< 15 lignes
+Equipe A;3A - Skill;Sans skill (add-feature);;;;;;;Compter les tours
+Equipe A;3B - Skill;Avec skill @add-feature;;;;;;;Compter les tours
+Equipe A;3C - Agent;Mode agent sans instructions;;;;;;;Tâche multi-fichiers
+Equipe A;3D - Agent;Mode agent + skill dédié;;;;;;;Tâche multi-fichiers
+Equipe A;4A - Prompt;Prompt vague;;;;;;;
+Equipe A;4B - Prompt;Prompt structuré;;;;;;;Avec Code only no explanation
+Equipe A;5A - Cache;Cache hit (même prompt);;;;;;;cached_tokens ≈ prompt_tokens ?
+Equipe A;5B - Modèle;Claude Sonnet 4.6;;;;;;;
+Equipe A;5B - Modèle;GPT-4o;;;;;;;
+Equipe A;5B - Modèle;GPT-4o-mini;;;;;;;
+Equipe A;5B - Modèle;Auto Mode;;;;;;;Comparer remise vs modele fixe
+Equipe A;6A - Bonus mode;Agent sur question simple;;;;;;;Comparer avec 6B
+Equipe A;6B - Bonus mode;Ask sur question simple;;;;;;;Comparer avec 6A
+Equipe A;6C - Bonus mode;Ask sur tache multi-fichiers;;;;;;;A fonctionne oui/non en notes
+Equipe A;6D - Bonus mode;Agent sur tache multi-fichiers;;;;;;;Fichiers edites correctement oui/non
+Equipe B;0 - Baseline;Aucun;;;;;;;Premier prompt de référence
+Equipe B;1 - Contexte;gitignore + files.exclude;;;;;;;Delta vs baseline
+Equipe B;1bis - Scope large;#codebase (question multi-fichiers dashboard);;;;;;;Comparer avec 1bis etroit
+Equipe B;1bis - Scope etroit;#file: x3 (app.js+storage.js+dashboard.js);;;;;;;Qualite equivalente oui/non en notes
+Equipe B;2A - Instructions;copilot-instructions verbeux;;;;;;;200+ lignes
+Equipe B;2B - Instructions;copilot-instructions court;;;;;;;< 15 lignes
+Equipe B;3A - Skill;Sans skill (add-feature);;;;;;;Compter les tours
+Equipe B;3B - Skill;Avec skill @add-feature;;;;;;;Compter les tours
+Equipe B;3C - Agent;Mode agent sans instructions;;;;;;;Tâche multi-fichiers
+Equipe B;3D - Agent;Mode agent + skill dédié;;;;;;;Tâche multi-fichiers
+Equipe B;4A - Prompt;Prompt vague;;;;;;;
+Equipe B;4B - Prompt;Prompt structuré;;;;;;;Avec Code only no explanation
+Equipe B;5A - Cache;Cache hit (même prompt);;;;;;;cached_tokens ≈ prompt_tokens ?
+Equipe B;5B - Modèle;Claude Sonnet 4.6;;;;;;;
+Equipe B;5B - Modèle;GPT-4o;;;;;;;
+Equipe B;5B - Modèle;GPT-4o-mini;;;;;;;
+Equipe B;5B - Modèle;Auto Mode;;;;;;;Comparer remise vs modele fixe
+Equipe B;6A - Bonus mode;Agent sur question simple;;;;;;;Comparer avec 6B
+Equipe B;6B - Bonus mode;Ask sur question simple;;;;;;;Comparer avec 6A
+Equipe B;6C - Bonus mode;Ask sur tache multi-fichiers;;;;;;;A fonctionne oui/non en notes
+Equipe B;6D - Bonus mode;Agent sur tache multi-fichiers;;;;;;;Fichiers edites correctement oui/non
+Equipe C;0 - Baseline;Aucun;;;;;;;Premier prompt de référence
+Equipe C;1 - Contexte;gitignore + files.exclude;;;;;;;Delta vs baseline
+Equipe C;1bis - Scope large;#codebase (question multi-fichiers dashboard);;;;;;;Comparer avec 1bis etroit
+Equipe C;1bis - Scope etroit;#file: x3 (app.js+storage.js+dashboard.js);;;;;;;Qualite equivalente oui/non en notes
+Equipe C;2A - Instructions;copilot-instructions verbeux;;;;;;;200+ lignes
+Equipe C;2B - Instructions;copilot-instructions court;;;;;;;< 15 lignes
+Equipe C;3A - Skill;Sans skill (add-feature);;;;;;;Compter les tours
+Equipe C;3B - Skill;Avec skill @add-feature;;;;;;;Compter les tours
+Equipe C;3C - Agent;Mode agent sans instructions;;;;;;;Tâche multi-fichiers
+Equipe C;3D - Agent;Mode agent + skill dédié;;;;;;;Tâche multi-fichiers
+Equipe C;4A - Prompt;Prompt vague;;;;;;;
+Equipe C;4B - Prompt;Prompt structuré;;;;;;;Avec Code only no explanation
+Equipe C;5A - Cache;Cache hit (même prompt);;;;;;;cached_tokens ≈ prompt_tokens ?
+Equipe C;5B - Modèle;Claude Sonnet 4.6;;;;;;;
+Equipe C;5B - Modèle;GPT-4o;;;;;;;
+Equipe C;5B - Modèle;GPT-4o-mini;;;;;;;
+Equipe C;5B - Modèle;Auto Mode;;;;;;;Comparer remise vs modele fixe
+Equipe C;6A - Bonus mode;Agent sur question simple;;;;;;;Comparer avec 6B
+Equipe C;6B - Bonus mode;Ask sur question simple;;;;;;;Comparer avec 6A
+Equipe C;6C - Bonus mode;Ask sur tache multi-fichiers;;;;;;;A fonctionne oui/non en notes
+Equipe C;6D - Bonus mode;Agent sur tache multi-fichiers;;;;;;;Fichiers edites correctement oui/non

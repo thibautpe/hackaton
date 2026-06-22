@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="src/styles/main.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+  <link rel="stylesheet" href="src/styles/pages.css" />
+  <link rel="stylesheet" href="src/styles/widgets.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">TaskFlow</h1>
+    <div class="header__stats">
+      <span id="stats-total">0 tâches</span>
+      <span id="stats-done">0 terminées</span>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <button class="nav__link nav__link--active" data-page="tasks">Tâches</button>
+    <button class="nav__link" data-page="projects">Projets</button>
+    <button class="nav__link" data-page="dashboard">Tableau de bord</button>
+  </nav>
+
+  <main class="main">
+
+    <!-- PAGE: Tâches -->
+    <div id="page-tasks" class="page">
+
+      <!-- Formulaire d'ajout -->
+      <section class="card form-section">
+        <h2 class="sr-only">Ajouter une tâche</h2>
+        <div class="form-row">
+          <input
+            type="text"
+            id="task-input"
+            class="input"
+            placeholder="Titre de la tâche..."
+            maxlength="100"
+          />
+          <select id="priority-select" class="select">
+            <option value="low">Basse</option>
+            <option value="medium" selected>Moyenne</option>
+            <option value="high">Haute</option>
+          </select>
+          <button id="add-btn" class="btn btn--primary">Ajouter</button>
+        </div>
+        <div id="form-error" class="form-error" aria-live="polite"></div>
+      </section>
+
+      <!-- Filtres -->
+      <div class="filters">
+        <button class="filter-btn filter-btn--active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="todo">À faire</button>
+        <button class="filter-btn" data-filter="done">Terminées</button>
+        <button class="filter-btn" data-filter="high">Haute priorité</button>
+      </div>
+
+      <!-- Liste des tâches -->
+      <section class="task-list" id="task-list" aria-label="Liste des tâches">
+        <p class="empty-state" id="empty-state">Aucune tâche pour l'instant. Ajoutez-en une !</p>
+      </section>
+
+    </div>
+
+    <!-- PAGE: Projets -->
+    <div id="page-projects" class="page" hidden>
+      <section class="card form-section">
+        <h2 class="sr-only">Créer un projet</h2>
+        <div class="form-row">
+          <input type="text" id="project-name-input" class="input" placeholder="Nom du projet..." maxlength="50" />
+          <input type="color" id="project-color-picker" value="#2563eb" />
+          <button id="add-project-btn" class="btn btn--primary">Créer</button>
+        </div>
+        <div id="project-form-error" class="form-error" aria-live="polite"></div>
+      </section>
+      <section id="project-list" aria-label="Liste des projets"></section>
+    </div>
+
+    <!-- PAGE: Dashboard -->
+    <div id="page-dashboard" class="page" hidden>
+      <section class="stat-grid" id="dashboard-overview"></section>
+      <section class="card">
+        <h3>Répartition par priorité</h3>
+        <div id="priority-chart"></div>
+      </section>
+      <section class="card">
+        <h3>Avancement par projet</h3>
+        <div id="project-breakdown"></div>
+      </section>
+      <section class="card">
+        <h3>Tâches en retard</h3>
+        <div id="overdue-tasks"></div>
+      </section>
+      <section class="card">
+        <h3>Activité récente</h3>
+        <div id="recent-activity"></div>
+      </section>
+    </div>
+
+  </main>
+
+  <script src="src/vendor/date-utils.lib.js"></script>
+  <script src="src/vendor/mini-validate.lib.js"></script>
+  <script src="src/utils/storage.js"></script>
+  <script src="src/utils/projectStorage.js"></script>
+  <script src="src/utils/helpers.js"></script>
+  <script src="src/utils/validators.js"></script>
+  <script src="src/utils/analytics.js"></script>
+  <script src="src/components/taskCard.js"></script>
+  <script src="src/components/filters.js"></script>
+  <script src="src/components/modal.js"></script>
+  <script src="src/components/toast.js"></script>
+  <script src="src/components/dropdown.js"></script>
+  <script src="src/components/datePicker.js"></script>
+  <script src="src/pages/projects.js"></script>
+  <script src="src/pages/dashboard.js"></script>
+  <script src="src/app.js"></script>
+
+</body>
+</html>

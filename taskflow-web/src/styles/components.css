@@ -1,0 +1,56 @@
+/* ===========================
+   components.css — Task cards
+   =========================== */
+
+.task-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow);
+  transition: opacity 0.2s;
+}
+
+.task-card--done {
+  opacity: 0.6;
+}
+
+.task-card__check {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.task-card__title {
+  flex: 1;
+  font-size: 15px;
+}
+
+.task-card--done .task-card__title {
+  text-decoration: line-through;
+  color: var(--color-muted);
+}
+
+.task-card__badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge--low    { background: #f0fdf4; color: var(--color-success); }
+.badge--medium { background: #fffbeb; color: var(--color-warn); }
+.badge--high   { background: #fef2f2; color: var(--color-danger); }
+
+.task-card__date {
+  font-size: 12px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
