@@ -247,11 +247,17 @@ Flux de données :
 
 ## 10. Bugs intentionnels (pour les exercices du hackaton)
 
-Deux points sont volontairement incomplets dans le code, pour servir de cibles
+Trois points sont volontairement incomplets dans le code, pour servir de cibles
 d'exercices "fix-bug" :
 
 - **`addTask()` dans `app.js`** : aucune validation du titre — un titre vide est
   accepté tel quel (cible de l'étape baseline du hackaton)
+- **`addTask()` dans `app.js`** : `input.value` est assigné directement à `task.title`
+  sans passer par `sanitize()`. Si `createTaskCard()` utilise ensuite `innerHTML` pour
+  afficher le titre, un titre comme `<img src=x onerror="alert(1)">` exécute du code
+  arbitraire — faille XSS classique, en contradiction directe avec la règle n°1 du
+  `.github/copilot-instructions.md`. C'est un bug de sécurité réaliste à corriger lors
+  de l'étape baseline ou en bonus.
 - **`storage.load()` dans `storage.js`** : aucune gestion d'erreur si `localStorage`
   est inaccessible (navigation privée) ou si le JSON stocké est corrompu — un
   `JSON.parse` invalide ferait planter toute l'application au chargement

@@ -106,7 +106,7 @@ de changer quoi que ce soit.
 → *Celui-ci est documenté et garanti : le fichier actif et les onglets ouverts
 sont systématiquement inclus dans le contexte, peu importe l'indexation.*
 
-**Créer `.gitignore`** à la racine :
+**Vérifier le `.gitignore`** à la racine — il est déjà présent dans le projet :
 ```
 dist/
 node_modules/
@@ -117,6 +117,8 @@ build-cache/
 *.log
 .env
 ```
+→ Pas besoin de le créer. L'objectif ici est de constater l'effet de son activation
+sur l'index VS Code — pas de le rédiger depuis zéro.
 
 **`Ctrl+Shift+P` → "Open User Settings JSON"** — ajouter :
 ```json
@@ -271,7 +273,8 @@ nb_tours = ___   AIC total = ___
 
 ### 3B — Chat avec skill
 
-Créer `.github/copilot/skills/add-feature.md` :
+Ouvrir `.github/copilot/skills/add-feature.md` — le fichier est déjà dans le projet,
+lisez-le avant de l'utiliser :
 
 ```markdown
 ---
@@ -323,7 +326,7 @@ nb_tours = ___   nb_fichiers_touchés = ___   AIC total = ___
 
 ### 3D — Agent avec skill dédié ⭐
 
-Créer `.github/copilot/skills/agent-task.md` :
+Ouvrir `.github/copilot/skills/agent-task.md` — le fichier est déjà dans le projet :
 
 ```markdown
 ---
@@ -465,6 +468,26 @@ button styled in components.css
 > Le mauvais choix de mode ne se voit pas toujours dans le Debug View —
 > parfois c'est juste vous qui perdez du temps à faire à la main ce que
 > le bon mode aurait fait automatiquement.
+
+### 🥚 Easter egg (si vous avez du temps devant vous)
+
+Le projet contient deux agents supplémentaires dans `.github/agents/` — non
+documentés dans ce guide, à découvrir librement :
+
+**`planner.agent.md`** — Agent read-only qui produit un plan d'implémentation
+structuré (fichiers à modifier, étapes, estimation de coût, risques) *sans toucher
+au code*. Un bouton "Implement this plan" passe ensuite la main à l'agent mode.
+→ Intérêt : séparer la phase de réflexion de l'exécution réduit les tool calls
+inutiles et les surprises en cours de route.
+
+**`reviewer.agent.md`** — Agent de review read-only, tourné intentionnellement sur
+`gpt-4o-mini` (modèle léger). Vérifie `sanitize()`, `storage.save()`, BEM,
+conventions JS. Produit une sortie `[CRITICAL / WARN / INFO]`.
+→ Intérêt : un modèle léger suffit pour vérifier des règles explicites — pas besoin
+du modèle le plus puissant pour ça. C'est le principe du `chat.utilityModel`
+appliqué à un agent dédié.
+
+Pour les invoquer : `@Planner` ou `@Reviewer` dans Copilot Chat.
 
 ---
 
